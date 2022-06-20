@@ -39,6 +39,14 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.(ttf|png|jpe?g|svg)$/i,
+                exclude: /node_modules/,
+                loader: 'file-loader',
+                options: {
+                    name: 'media/[name].[contenthash:8].[ext]',
+                },
+            },
         ],
     },
     resolve: {
